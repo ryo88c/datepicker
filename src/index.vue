@@ -1,6 +1,6 @@
 <template>
-  <component :value="date" :placeholder="placeholder" 
-    :inputClass="inputClass" :alignment="alignment" 
+  <component :value="date" :placeholder="placeholder"
+    :inputClass="inputClass" :alignment="alignment"
     :is="wrap ? 'WrapperInput' : 'SingleInput'">
     <slot></slot>
   </component>
@@ -110,4 +110,8 @@ $selected_day_background = #1fc8db
 
 .flatpickr-calendar.hasWeeks
   width: auto !important
+
+[data-wrap=true] .flatpickr-input
+  min-width: 14rem
+
 </style>

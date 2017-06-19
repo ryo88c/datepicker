@@ -1,8 +1,12 @@
 <template>
-  <p class="control has-addons flatpickr" data-wrap="true" data-clickOpens="false" :class="{ [`has-addons-${alignment}`]: alignment }">
-    <input class="input" :class="inputClass" type="text" :placeholder="placeholder" :value="value" data-input/>
-    <slot></slot>
-  </p>
+  <div class="field has-addons">
+    <p class="control flatpickr" data-wrap="true" data-clickOpens="false" :class="{ [`has-addons-${alignment}`]: alignment }">
+      <input class="input" :class="inputClass" type="text" :placeholder="placeholder" :value="value" data-input/>
+    </p>
+    <p class="control">
+      <slot></slot>
+    </p>
+  </div>
 </template>
 
 <script>
